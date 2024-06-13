@@ -1,5 +1,5 @@
 -- Вставка данных в таблицу музыкальных жанров
-INSERT INTO type_ (id_type, name ) VALUES
+INSERT INTO type_ (id_type, name ) values
 (1, 'Rock'),
 (2, 'Pop'),
 (3, 'Jazz');
@@ -19,8 +19,7 @@ INSERT INTO type_singer (type_id, singer_id) VALUES
 (2, 2), -- Adele исполняет Pop
 (3, 3), -- Miles Davis исполняет Jazz
 (1, 3), -- Miles Davis также исполняет Rock
-(4, 2); -- Tomas Shelby исполняет Pop
-
+(2, 4); -- Tomas Shelby исполняет Pop
 
 -- Вставка данных в таблицу альбомов
 INSERT INTO album_ (id_album, album_name, album_year) VALUES
@@ -39,12 +38,13 @@ INSERT INTO singer_album (singer_id, album_id) VALUES
 
 -- Вставка данных в таблицу треков
 INSERT INTO song_ (id_song, song_name, song_time, album_id) VALUES
-(1, 'Bohemian Rhapsody', 5.55, 1),
-(2, 'Someone Like You', 4.45, 2),
-(3, 'So What', 9.22, 3),
-(4, 'Netology', 3.16, 1),
-(5, 'Lol', 2.55, 2),
-(6, 'Why', 7.52, 3);
+(1, 'Bohemian Rhapsody', 355, 1),
+(2, 'Someone Like You', 305, 2),
+(3, 'So What', 562, 3),
+(4, 'My Netology', 196, 1),
+(5, 'Lol', 177, 2),
+(6, 'Why', 472, 3);
+
 
 
 -- Вставка данных в таблицу сборников
@@ -64,3 +64,11 @@ INSERT INTO sbornik_song (sbornik_id, song_id) VALUES
 (4, 6), -- 'Why' включен в сборник "High"
 (3, 4); -- 'Netology' включен в сборник "Love"
 
+
+insert into singer_song (singer_id, song_id) values
+(1, 5),
+(2, 6),
+(3, 2),
+(4, 1),
+(3, 3),
+(1, 4);

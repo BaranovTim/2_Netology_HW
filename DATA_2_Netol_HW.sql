@@ -60,4 +60,10 @@ CREATE TABLE IF NOT EXISTS sbornik_song (
     PRIMARY KEY(sbornik_id, song_id)
 );
 
+create table if not exists singer_song (
+	singer_id INTEGER references singer_(id_singer),
+	song_id integer references song_(id_song),
+	primary key(singer_id, song_id)
+);
+
 
